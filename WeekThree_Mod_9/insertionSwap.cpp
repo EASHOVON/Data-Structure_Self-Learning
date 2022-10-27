@@ -26,13 +26,18 @@ int main()
     cin >> pos;
     cout << "Enter Value: ";
     cin >> value;
+    /*
+        // Insertion Starting with swaping method with time complexity O(n)
+        for (int i = size-1; i>=pos; i--)
+        {
 
-    // Insertion Starting with swaping method
-    for (int i = size - 1; i >= pos; i--)
-    {
-        /* code */
-        array[i + 1] = array[i];
-    }
+            array[i + 1] = array[i];
+        }
+        array[pos] = value;
+         */
+    // Insertion with time complexity O(1)
+
+    array[size] = array[pos];
     array[pos] = value;
 
     cout << "After inserting: ";
